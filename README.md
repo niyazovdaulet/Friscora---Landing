@@ -1,186 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Friscora – Personal Finance &amp; Work Schedule</title>
+# Friscora — Landing page
 
-<style>
-    body {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "SF Pro", Inter, Helvetica, Arial, sans-serif;
-        background: linear-gradient(180deg, #0D0F1A, #11131F);
-        color: white;
-        overflow-x: hidden;
-    }
+Marketing / product landing page for the Friscora iOS app. Deploy as GitHub Pages (or any static host).
 
-    .container {
-        max-width: 1100px;
-        margin: auto;
-        padding: 60px 20px;
-    }
+## Contents
 
-    h1 {
-        font-size: 48px;
-        font-weight: 700;
-        margin-bottom: 10px;
-        text-align: center;
-    }
+- `index.html` — Hero, feature grid, privacy summary, footer with Support and Privacy links.
 
-    h2 {
-        font-size: 32px;
-        margin-top: 60px;
-        margin-bottom: 20px;
-    }
+## Deploy (GitHub Pages)
 
-    p {
-        opacity: 0.85;
-        font-size: 18px;
-        text-align: center;
-        line-height: 1.6;
-    }
+1. Create a repository named `friscora-landing` (or your chosen name).
+2. Put `index.html` at the **repository root** (or use `/docs` with GitHub Pages configured accordingly).
+3. In **Settings → Pages**, publish from the correct branch and folder.
+4. Update footer links if your Support or Privacy URLs differ.
 
-    .hero {
-        text-align: center;
-        margin-top: 80px;
-        margin-bottom: 60px;
-    }
+## Before you publish
 
-    .cta-button {
-        display: inline-block;
-        padding: 14px 28px;
-        margin-top: 20px;
-        background: linear-gradient(90deg, #4dd0ff, #8e7dff);
-        border-radius: 12px;
-        color: white;
-        font-size: 20px;
-        font-weight: 600;
-        text-decoration: none;
-        transition: 0.2s ease;
-    }
+- Set the real **App Store** URL: replace `YOUR_APP_STORE_ID` in the CTA `href` with your numeric app id (same value you use in the app’s `FRISCORA_APP_STORE_ID` / App Store link).
+- Adjust feature copy if the product changes.
 
-    .cta-button:hover {
-        opacity: 0.85;
-    }
+## Local preview
 
-    .features {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
-    }
-
-    .feature-box {
-        background: rgba(255, 255, 255, 0.05);
-        padding: 25px;
-        border-radius: 16px;
-        backdrop-filter: blur(6px);
-    }
-
-    .feature-box h3 {
-        margin-top: 0;
-        margin-bottom: 12px;
-        font-size: 22px;
-    }
-
-    .feature-box p {
-        text-align: left;
-        font-size: 16px;
-    }
-
-    footer {
-        margin-top: 80px;
-        padding: 40px 20px;
-        text-align: center;
-        opacity: 0.7;
-        font-size: 15px;
-    }
-
-    a { color: #4dd0ff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-    <div class="hero">
-        <h1>Friscora</h1>
-        <p>Income, expenses, goals, and analytics—plus a work schedule planner built for real life.</p>
-        <a href="https://apps.apple.com/app/idYOUR_APP_STORE_ID" class="cta-button">Available on the App Store</a>
-    </div>
-
-    <h2>Stay in control of your money</h2>
-    <p>Friscora is a native SwiftUI app for iPhone: fast, private-first, and focused on clarity—not buzzwords.</p>
-
-    <div class="features">
-
-        <div class="feature-box">
-            <h3>📊 Dashboard &amp; analytics</h3>
-            <p>See your balance, monthly flow, and spending by category with charts tuned for quick decisions.</p>
-        </div>
-
-        <div class="feature-box">
-            <h3>🗓 Work schedule &amp; salary view</h3>
-            <p>Plan shifts and patterns, navigate the calendar, and understand how work lines up with your finances.</p>
-        </div>
-
-        <div class="feature-box">
-            <h3>🎯 Goals</h3>
-            <p>Set savings targets and track progress alongside day-to-day expenses.</p>
-        </div>
-
-        <div class="feature-box">
-            <h3>📄 Statement import</h3>
-            <p>Bring in bank statements and categorize with a deterministic, rule-based engine—no in-app AI assistant.</p>
-        </div>
-
-        <div class="feature-box">
-            <h3>🔗 Optional schedule sharing</h3>
-            <p>Pair schedules securely when you choose to use sharing; backed by Firebase Auth and Firestore.</p>
-        </div>
-
-        <div class="feature-box">
-            <h3>🌐 Multiple languages</h3>
-            <p>English, Kazakh, Polish, and Russian string support for a broader audience.</p>
-        </div>
-
-    </div>
-
-    <h2>Your data stays yours</h2>
-    <p>
-        Core finance and schedule data lives on your device. Optional iCloud Key-Value and Firebase-backed
-        features are used only where the app clearly needs them—for example schedule sharing and feedback.
-    </p>
-
-    <h2>Built for privacy</h2>
-    <p>
-        Optional app lock, on-device statement handling, and a privacy manifest aligned with App Store expectations.
-        Read the full policy for details.
-    </p>
-
-    <div class="features">
-        <div class="feature-box">
-            <ul style="list-style: none; padding-left: 0; margin: 0; text-align: left; opacity: 0.9; font-size: 17px; line-height: 1.8;">
-                <li>✨ Native SwiftUI experience</li>
-                <li>📱 iOS 18+</li>
-                <li>☁️ Optional iCloud Key-Value</li>
-                <li>📤 Data export from Profile</li>
-                <li>🔐 Optional authentication lock</li>
-            </ul>
-        </div>
-    </div>
-
-
-    <footer>
-        <p><a href="https://niyazovdaulet.github.io/Friscora-Support/">Support</a> •
-           <a href="https://niyazovdaulet.github.io/friscora-privacy/">Privacy Policy</a></p>
-        <p>© 2026 Friscora. All rights reserved.</p>
-    </footer>
-
-</div>
-
-</body>
-</html>
+Visit `https://niyazovdaulet.github.io/Friscora-Landing/`.
